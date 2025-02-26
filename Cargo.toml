@@ -1,0 +1,11 @@
+[package]
+name = "avowed_game_pass_to_steam"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.31", features = ["derive"] }
+uuid = "1.14.0"
+
+[profile.release]
+strip = true

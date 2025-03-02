@@ -8,7 +8,7 @@ if "%~1" == "" (
 )
 
 cd /d "%~dp0"
-set "cmd=gpts.exe --in-path "!%~1!""
+set "cmd=gpts.exe --in-path "%~1""
 %cmd%
 
 if %errorlevel% neq 0 (

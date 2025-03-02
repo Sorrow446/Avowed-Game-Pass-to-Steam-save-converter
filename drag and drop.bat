@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 
 if "%~1" == "" (
     echo Drag and drop a Game Pass save folder onto this batch file.
@@ -6,9 +7,8 @@ if "%~1" == "" (
     exit
 )
 
-cd /d "%~dp0"
-set "cmd=%~dp0gpts.exe -i "%~1""
-
+cd "%~dp0"
+set "cmd=gpts.exe --in-path "!%~1!""
 %cmd%
 
 if %errorlevel% neq 0 (

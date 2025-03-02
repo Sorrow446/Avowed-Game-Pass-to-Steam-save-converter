@@ -7,7 +7,7 @@ if "%~1" == "" (
     exit
 )
 
-cd "%~dp0"
+cd /d "%~dp0"
 set "cmd=gpts.exe --in-path "!%~1!""
 %cmd%
 
